@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  outerbase:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 3000
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
